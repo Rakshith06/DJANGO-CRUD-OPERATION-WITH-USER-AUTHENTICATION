@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Crud Operation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  </head>
+  <body style="background-color:#42f5ef">
+    <div class="container" align="center">
+    <h1>Updation form</h1>
+    <form method="post">
+      Employee Number:<input type="text" name="eno" value="{{emp.eno}}"><br><br>
+      Employee name:<input type="text" name="ename" value="{{emp.ename}}"><br><br>
+      Employee salary:<input type="text" name="esal" value="{{emp.esal}}"><br><br>
+      Employee address:<input type="text" name="eadd" value="{{emp.eadd}}"><br><br>
+      {% csrf_token %}
+      <input type="submit"  class="btn btn-lg btn-primary"value="submit">
+
+      </form>
+      </div>
+
+   </body>
+</html>

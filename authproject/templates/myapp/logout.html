@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{%extends 'myapp/parent.html'%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% block for_child  %}
+    <div class="jumbotron">
+      <div class="container" align="center">
+        <h1>LOGGED OUT SUCCESSFULLY-THANK U</h1>
+        <h3>log in again</h3>
+        <a href="/accounts/login" class="btn btn-primary">login</a>
+
+
+      </div>
+    </div>
+    {% endblock %}
+
+  </body>
+</html>

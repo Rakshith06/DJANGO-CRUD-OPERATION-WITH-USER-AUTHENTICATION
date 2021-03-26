@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{%extends 'myapp/parent.html'%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% block for_child  %}
+    <div class="jumbotron">
+      <div class="container" align="center">
+        <<h1 style="color:red">LOGIN FORM</h1>
+        <form method="post">
+          {{form.as_p}}
+          {%csrf_token%}
+          <input type="submit"  class="btn btn-primary" value="submit"><br><br>
+          <h4>Sign-Up Here If You Dont Have Account</h4>
+            <a href="/signup" style='color:white' class='btn btn-primary'>SIGNUP HERE</a><br>
+
+        </form>
+
+
+      </div>
+    </div>
+    {% endblock %}
+
+  </body>
+</html>

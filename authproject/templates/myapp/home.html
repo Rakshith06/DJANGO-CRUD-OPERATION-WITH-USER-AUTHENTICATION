@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{%extends 'myapp/parent.html'%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CRUD OPERATION</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+   </head>
+  <body>
+    {% block for_child  %}
+    <div class="jumbotron">
+      <div class="container" >
+      <h2><center>WELCOME TO EMPLOYEE DATA BASE </center></h2><br><br>
+    </div>
+    </div>
+    <div class="container" align="center">
+    <h1 style="color:black;">EMPLOYEE DETAIL</h1>
+    <table border="1">
+      <tr style="color:blue;">
+        <th ><b><h3>Employee Number</b></h3></th>
+        <th ><b><h3>Employee Name</b></h3></th>
+        <th ><b><h3>Employee Salary</b></h3></th>
+        <th><b><h3>Employee Address</b></h3></th>
+        <th><b><h3>Action</b></h3></th>
+
+      </tr>
+      {%for x in emp%}
+      <tr>
+        <td>{{x.eno}}</td>
+        <td>{{x.ename}}</td>
+        <td>{{x.esal}}</td>
+        <td>{{x.eadd}}</td>
+        <td><a href="/update/{{x.id}}" class="btn btn-warning">Update</a></td>
+        <td><a href="/delete/{{x.id}}" class="btn  btn-danger">Delete</a></td>
+
+      </tr>
+
+      {%endfor%}
+    </table>
+    <br>
+    <br>
+    <br>
+    <a href="/insert" class="btn btn-primary">Do you want to insert a new record</a>
+  </div>
+    {% endblock %}
+  </body>
+</html>
