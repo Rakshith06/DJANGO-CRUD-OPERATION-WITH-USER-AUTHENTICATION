@@ -8,7 +8,7 @@ def home_view(request):
     e=Employee.objects.all()
 
     d={'emp':e}
-    return render(request,'myapp/home.html',d)
+    return render(request,'myapp/index.html',d)
 @login_required
 def insert_view(request):
     f=EmployeeForm()
